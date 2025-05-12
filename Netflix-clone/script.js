@@ -5,7 +5,7 @@ if (location.href.indexOf('netlify') != -1) {
   apiUrl = 'https://netflix-cp.herokuapp.com'
 }
 
-// Called whe the page is loaded
+
 window.onload = () => {
   getOriginals()
   getTrendingNow()
@@ -45,23 +45,7 @@ function letVarExample(firstName = 'Nazariy') {
     state: 'NY',
   }
 
-  // address.state = "MI";
-
-  // let state = address.state;
-  // state = "MI"
-  // console.log(address);
-
-  // let address2 = address;
-  // address2.state = "MI";
-
-  // let address2 = {
-  //     ...address,
-  //     apartment: "MI"
-  // }
-
-  // let { street, city, state } = address;
-
-  // console.log(street + city + state);
+   
 }
 
 async function getMovieTrailer(id) {
@@ -91,7 +75,7 @@ const setTrailer = trailers => {
 const handleMovieSelection = e => {
   const id = e.target.getAttribute('data-id')
   const iframe = document.getElementById('movieTrailer')
-  // here we need the id of the movie
+  
   getMovieTrailer(id).then(data => {
     const results = data.results
     const youtubeTrailers = results.filter(result => {
@@ -135,7 +119,7 @@ function fetchMoviesBasedOnGenre(genreId) {
     } else {
       throw new Error('something went wrong')
     }
-  }) // returns a promise already
+  })
 }
 
 function fetchMovies(url, element_selector, path_type) {
@@ -157,7 +141,7 @@ function fetchMovies(url, element_selector, path_type) {
 
 function showMoviesGenres(genres) {
   genres.genres.forEach(function (genre) {
-    // get list of movies
+   
     var movies = fetchMoviesBasedOnGenre(genre.id)
     movies
       .then(function (movies) {

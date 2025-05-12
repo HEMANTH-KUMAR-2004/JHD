@@ -236,12 +236,3 @@ function getTopRated() {
   fetchMovies(url, '#top_rated', 'backdrop_path')
 }
 
-// Loop through list of genres
-//     Show genres in HTML
-//     Fetch movies based on genre fetchMovies(url, genre, classInHTML)
-//     Display the list of movies
-
-// https://api.themoviedb.org/3/discover/movie?api_key=19f84e11932abbc79e6d83f82d6d1045&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&with_genres=28
-
-// Movies genres
-// https://api.themoviedb.org/3/genre/movie/list?api_key=19f84e11932abbc79e6d83f82d6d1045&language=en-US
